@@ -11,6 +11,7 @@ const Continer = tw.div`
    bg-white
 `;
 
+
 const WarapperContainer = tw.div`
    max-w-7xl 
    mx-auto 
@@ -22,7 +23,7 @@ const WarapperContainer = tw.div`
    lg:px-8
 `;
 
-const BigHeader = tw.h2`
+const BigHeaderWarrapper = tw.h2`
   text-3xl 
   font-extrabold 
   tracking-tight 
@@ -30,10 +31,85 @@ const BigHeader = tw.h2`
   sm:text-4xl
 `
 
+const HeaderText = tw.span`
+   block
+`
+
+const ButtunsContainer = tw.div`
+  mt-8 
+  flex 
+  justify-center
+`
+
+const ButtunWarrapperOneStyle = styled.div`
+   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+`
+
+
+const ButtunWarrapperOne = tw(ButtunWarrapperOneStyle)`
+   inline-flex 
+   rounded-md 
+  
+`
+
+const ButtonOne = tw.a`
+      inline-flex 
+      items-center 
+      justify-center 
+      px-5 
+      py-3 
+      border 
+      border-transparent 
+      text-base 
+      font-medium 
+      rounded-md 
+      text-white 
+      bg-indigo-600 
+      hover:bg-indigo-700
+`
+
+
+
+
+const ButtunWarrapperTwo = tw.div`
+   inline-flex 
+   shadow
+`
+
+interface ButtonTwoStyleProps {
+   isMarginLeft?: boolean
+}
+
+const ButtonTwoStyle = styled.a<ButtonTwoStyleProps>`
+   margin-left: ${({isMarginLeft}) => isMarginLeft ? '0.75rem' : ''};
+`
+
+const ButtonTwo = tw(ButtonTwoStyle)`
+      inline-flex 
+      items-center 
+      justify-center 
+      px-5 
+      py-3 
+      border 
+      border-transparent 
+      text-base 
+      font-medium 
+      rounded-md 
+      text-indigo-700 
+      bg-indigo-100 
+      hover:bg-indigo-200
+`
+
 const Styled ={
     Continer,
     WarapperContainer,
-    BigHeader
+    BigHeaderWarrapper,
+    HeaderText,
+    ButtunsContainer,
+    ButtunWarrapperOne,
+    ButtonOne,
+    ButtunWarrapperTwo,
+    ButtonTwo
 }
 
 export default Styled;
