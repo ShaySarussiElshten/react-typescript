@@ -13,6 +13,9 @@ const Child = () => {
       <Styled.Continer>
         <Styled.WarapperContainer>
           <Styled.BigHeaderWarrapper>
+          <Styled.WarapperIcon strokeW={"5"}>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </Styled.WarapperIcon>
             <Styled.HeaderText>Ready to dive in?</Styled.HeaderText>
             <Styled.HeaderText>Start your free trial today.</Styled.HeaderText>
           </Styled.BigHeaderWarrapper>

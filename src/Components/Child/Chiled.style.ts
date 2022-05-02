@@ -100,6 +100,25 @@ const ButtonTwo = tw(ButtonTwoStyle)`
       hover:bg-indigo-200
 `
 
+interface WarapperIconStyle {
+   strokeW: any
+}
+
+
+const WarapperIconStyle = styled.svg.attrs<WarapperIconStyle>(({strokeW})=>({
+   xmlns:"http://www.w3.org/2000/svg",
+   fill:"none",
+   viewBox:"0 0 24 24",
+   stroke:"currentColor",
+   strokeWidth:strokeW
+}))`     
+`
+
+const WarapperIcon = tw(WarapperIconStyle)`
+   h-6 
+   w-6
+`
+
 const Styled ={
     Continer,
     WarapperContainer,
@@ -109,7 +128,8 @@ const Styled ={
     ButtunWarrapperOne,
     ButtonOne,
     ButtunWarrapperTwo,
-    ButtonTwo
+    ButtonTwo,
+    WarapperIcon
 }
 
 export default Styled;
